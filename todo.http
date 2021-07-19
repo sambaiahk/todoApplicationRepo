@@ -1,0 +1,49 @@
+###
+GET http://localhost:1315/todos/?status=TO%20DO
+
+###
+GET http://localhost:1315/todos/?priority=LOW
+
+###
+GET http://localhost:1315/todos/?priority=HIGH&status=IN%20PROGRESS
+
+###
+GET http://localhost:1315/todos/8
+
+###
+POST http://localhost:1315/todos/
+Content-Type: application/json
+
+{
+    "id" : 11,
+    "todo": "Finalize event theme",
+    "priority": "LOW",
+    "status": "TO DO" 
+}
+
+###
+PUT http://localhost:1315/todos/4
+Content-Type: application/json
+
+{
+    "status" : "DONE"
+}
+
+###
+PUT http://localhost:1315/todos/4
+Content-Type: application/json
+
+{
+    "Priority" : "HIGH"
+}
+
+###
+PUT http://localhost:1315/todos/4
+Content-Type: application/json
+
+{
+    "todo" : "Some task"
+}
+
+###
+DELETE http://locahost:1315/todos/11/
